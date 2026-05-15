@@ -1,0 +1,30 @@
++---------------------------------------------------------------+
+|    DOCKER & KUBERNETES: THE PRACTICAL GUIDE [2022 EDITION]    |
++---------------------------------------------------------------+
+
+SECTION-12   : KUBERNATES IN ACTION - DIVING INTO THE CORE CONCEPTS
+VIDEO-190    : EXPOSING A DEPLOYMENT WITH A SERVICE
+
+Services
+	Exposes Pod created by a deployment by creating service.
+
+Create a Service Object to the Cluster	
+	kubectl expose deployment DEP_NAME --type=TYPES_OF_SERVICES --port=PORTNUMBER
+	kubectl expose deployment first-app --type=LoadBalancer --port=8080
+
+Types of Services
+	ClusterIP    - This is a default Services which means it will only be reachable inside the Cluster. The Address doesnt change.
+	NodePort     - This deployment should be exposed with help of the IP Address of a worker node on which it is running. This can be accessible by outside.
+	LoadBalancer - Utilizes a Load Balancer which has to exist in the infrastructure on which our cluster runs.
+				   Load Balancer will generate a Unique Address for this service.
+				   It will also evenly distribute incoming traffic across all Pods which are part of this services.
+				   It will only run if the infrastructure of the Cluster supports it. Like AWS Load Balancer, minikube etc.
+
+View number of Services created
+	kubectl get services
+	
+Since we do not get an EXTERNAL-IP from the above command output, we need to take help from the Minikube.
+Minikube give us access to the Services mapping a special port to an IP which we can reach from local machine & which identifies the Virtual Machine running on Local Machine.
+	minikube service DEP_NAME
+	minikube service first-app
+	

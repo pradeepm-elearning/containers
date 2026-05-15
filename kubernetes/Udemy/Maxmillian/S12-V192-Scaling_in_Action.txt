@@ -1,0 +1,13 @@
++---------------------------------------------------------------+
+|    DOCKER & KUBERNETES: THE PRACTICAL GUIDE [2022 EDITION]    |
++---------------------------------------------------------------+
+
+SECTION-12   : KUBERNATES IN ACTION - DIVING INTO THE CORE CONCEPTS
+VIDEO-192    : SCALING IN ACTION
+
+If the autoscaling is disabled, we can use this feature to scale the application as per the requirements.
+
+Scaling the Pod
+	kubectl scale deployment/DEP_NAME --replicas=NUMBER
+	kubectl scale deployment/first-app --replicas=3
+	

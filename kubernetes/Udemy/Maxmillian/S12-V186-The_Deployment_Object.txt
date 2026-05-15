@@ -1,0 +1,12 @@
++---------------------------------------------------------------+
+|    DOCKER & KUBERNETES: THE PRACTICAL GUIDE [2022 EDITION]    |
++---------------------------------------------------------------+
+
+SECTION-12   : KUBERNATES IN ACTION - DIVING INTO THE CORE CONCEPTS
+VIDEO-186    : THE DEPLOYMENT OBJECT (RESOURCE)
+
+Deployment
+	Give instructions about number of Pods and Container it should create and manage.
+	Controls one or multiple Pods
+	Deployment can be paused, deleted & rolled back.
+	Deployment can be dynamically scaled (and Automatically).

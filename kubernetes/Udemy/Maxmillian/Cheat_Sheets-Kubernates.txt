@@ -1,0 +1,51 @@
++-----------------------------------------------------------------------+
+|            C H E A T   S H E E T S   -   K U B E R N E T E S          |
++-----------------------------------------------------------------------+
+
+minikube status		#checks if the kubernetes cluster is up and running.
+
+kubectl create deployment/DEPLOYMENT_NAME --image=DOCKER_IMAGE		#creates a deployment object in a cluster.
+
+kubectl get deployments		#view number of deployment created
+
+kubectl get pods	#view number of Pods created
+
+kubectl delete deployments/DEPLOYMENT_NAME		#delete Deployments
+
+kubectl delete pods POD_NAME		#delete Pods
+
+kubectl expose deployment/DEPLOYMENT_NAME --type=TYPES_OF_SERVICES --port=PORTNUMBER	#create kubernetes service & expose ports
+	where --type=[ClusterIP / NodePort / LoadBalancer]
+
+kubectl get services	#view number of Services created
+
+minikube service DEPLOYMENT_NAME	#check the Usable IP for the Services
+
+kubectl scale deployment/DEPLOYMENT_NAME --replicas=NUMBER		#Scaling the Pod
+
+kubectl set image deployment/DEPLOYMENT_NAME IMAGE_NAME=DOCKER_ID/IMAGE_NAME:NEXT_TAG		#to Update the Deployment
+	
+kubectl rollout status deployment/DEPLOYMENT_NAME		#view the current updating Status and to check the progress of the Rollouts
+
+kubectl rollout undo deployment/DEPLOYMENT_NAME		#rollback to the previous deployment
+
+kubectl rollout history deployment/DEPLOYMENT_NAME		#checks the Rollback numbers
+
+kubectl rollout history deployment/DEPLOYMENT_NAME --revision=NUMBER	#view the details of Rollback History
+
+kubectl rollout undo deployment/DEPLOYMENT_NAME --to-revision=NUMBER	#rollback to specific older deployment.
+
+kubectl get all
+
+kubectl get nodes
+
+kubectl get rs 
+
+kubectl delete rs REPLICASET
+
+kubectl describe pods
+
+kubectl describe deployment
+
+kubectl describe rs
+

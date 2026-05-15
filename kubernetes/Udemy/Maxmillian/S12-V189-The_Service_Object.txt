@@ -1,0 +1,21 @@
++---------------------------------------------------------------+
+|    DOCKER & KUBERNETES: THE PRACTICAL GUIDE [2022 EDITION]    |
++---------------------------------------------------------------+
+
+SECTION-12   : KUBERNATES IN ACTION - DIVING INTO THE CORE CONCEPTS
+VIDEO-189    : THE SERVICE OBJECT (RESOURCE)
+
+Dis-advantage of Internal IP in a Pods
+	1. We cannot use them to access the Pods from outside the Cluster.
+	2. It changes when the Pods are replaced during Scalling.
+
+Service Object
+	It is an object responsible for exposing Pods to another Pods in the cluster or externally.
+	It groups Pods together and gives them a shared IP address. This address wont change.
+	It can allow external access to Pods.
+	
+Without Services, Pods are very hard to reach and communication is difficult.
+Reaching a Pod from Outside the Cluster is not possible at all without Services.
+
+
+	

@@ -1,0 +1,19 @@
+#
+##
+###
+
+Understanding "State"
+
+State: State is a data created and used by your application which must not be lost.
+
+There are two types of State
+1. User-generated data, user accounts, ...
+	-	often stored in the database, but could also be files (e.g., uploads)
+2. Intermediate results derived by the application.
+	-	often stored in memory, temporary database tables or files.
+
+These 2 datas are important. Hence we need to persist data during a container restart.
+This is the reason we need Volumes.
+
+While using kubernates, we wont be able to add the volumes using Docker commands.
+We need to configure Kubernates to add Volumes to the Containers.

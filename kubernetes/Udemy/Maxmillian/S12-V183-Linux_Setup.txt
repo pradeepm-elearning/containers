@@ -1,0 +1,98 @@
++---------------------------------------------------------------+
+|    DOCKER & KUBERNETES: THE PRACTICAL GUIDE [2022 EDITION]    |
++---------------------------------------------------------------+
+
+SECTION-12   : KUBERNATES IN ACTION - DIVING INTO THE CORE CONCEPTS
+VIDEO-183    : macOS Setup
+
+kubectl - A tool for sending instructions to the cluster (eg. a new deployment)
+minikube - It is a tool that makes it easy to run Kubernates locally. Minikube runs a single-node Kubernates cluster inside a Virtual Machine (VM) on your laptop.
+
+
++-------------------------------+
+|    INSTALLATION OF kubectl    |
++-------------------------------+
+1. Download the latest release with the command:
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+2. Validate the binary (optional). Download the kubectl checksum file:
+curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+
+3. Validate the kubectl binary against the checksum file:
+echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+
+4. Install kubectl
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
+5. Test to ensure the version you installed is up-to-date:
+kubectl version --client --output=yaml
+
+
+
++-----------------------------------+
+|    INSTALLATION OF VIRTUAL BOX    |
++-----------------------------------+
+1. Add repo in yum repos.
+vim /etc/yum.repos.d/virtualbox.repo
+[virtualbox]
+name=Fedora $releasever - $basearch - VirtualBox
+baseurl=http://download.virtualbox.org/virtualbox/rpm/rhel/$releasever/$basearch
+enabled=1
+gpgcheck=0
+repo_gpgcheck=0
+gpgkey=https://www.virtualbox.org/download/oracle_vbox.asc
+
+2. Refresh the Yum Repository
+yum-config-manager --enable virtualbox.repo
+
+3. Install Virtual Box
+yum install VirtualBox-6.1
+
+
++---------+
+|   O R   |
++---------+
+
+
++--------------------------------+
+|    INSTALLATATION OF docker    |
++--------------------------------+
+1. Create a Directory to hold Docker Binaries
+mkdir -pv /opt/docker
+
+2. Goto created Docker Directory
+cd /opt/docker
+
+3. Download the Binary
+wget "https://download.docker.com/linux/static/stable/x86_64/docker-20.10.0.tgz"
+
+4. untar the file
+tar -xvzf docker-20.10.0.tgz
+
+5. Copy the binaries to bin directory in /usr
+sudo cp docker/* /usr/bin/
+
+NOTE: If you get the below error
+"Failed to find iptables: exec: "iptables": executable file not found in $PATH"
+then execute the below script.
+yum install iptables -y
+
+6. Start the Docker.
+sudo dockerd &
+
+7. Give full permission if any user wants to use the Docker.
+chmod 777 /var/run/docker.sock
+
+
+
++--------------------------------+
+|    INSTALLATION OF minikube    |
++--------------------------------+
+1. Download the latest release with the command
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+
+2. Install minikube
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+3. Start minikube with required VM. I am using docker as VM.
+minikube start --driver=docker

@@ -1,0 +1,29 @@
++---------------------------------------------------------------+
+|    DOCKER & KUBERNETES: THE PRACTICAL GUIDE [2022 EDITION]    |
++---------------------------------------------------------------+
+
+SECTION-12   : KUBERNATES IN ACTION - DIVING INTO THE CORE CONCEPTS
+VIDEO-187    : A FIRST DEPLOYMENT - USING THE IMPERATIVE APPROACH
+
+PRE-REQUISITES
+Download the attachment from the Resource Folder which contains Dockerfile.
+Create a Docker Images and push it to Docker Hub.
+Check if the Kubernetes Cluster is UP and RUNNING.
+	minikube status
+
+Create a Deployment Object to the Cluster
+	kubectl create deployment NAME --image=DOCKER_IMAGE
+	kubectl create deployment first-app --image=ccpradeepm/kub-action-1
+	
+View number of Deployements created
+	kubectl get deployments
+	
+View number of Pods created
+	kubectl get pods
+
+Delete Deployments
+	kubectl delete deployments DEPLOYMENT_NAME
+	
+Delete Pods
+	kubectl delete pods POD_NAME
+

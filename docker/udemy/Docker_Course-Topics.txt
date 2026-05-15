@@ -1,0 +1,71 @@
+Stephen Grider
+--------------
+
+Section 1: Dive Into Docker!	-	37 min
+	Module 1 - Module 14	-	37min
+	
+Section 2: Manipulating Containers with the Docker Client - 51 min
+	Module 15 - Module 28	-	51min
+	
+Section 3: Building Custom Images Through Docker Server - 48 min
+	Module 29 - Module 39	-	48min
+	
+Section 4: Making Real Projects with Docker	-	54 min
+	Module 40 - Module 50	-	54min
+	
+Section 5: Docker Compose with Multiple Local Containers	-	52 min
+	Module 51 - Module 61	-	52min
+	
+Section 6: Creating a Production-Grade Workflow	-	1hr 36 min
+Section 7: Continuous Integration and Deployment with AWS	-	1hr 7 min
+Section 8: Building a Multi-Container Application	-	1hr 13min
+Section 9: "Dockerizing" Multiple Services	-	1hr 18min
+Section 10: A Continuous Integration Workflow for Multiple Images	-	46min
+Section 11: Multi-Container Deployments to AWS	-	1hr 49min
+Section 12: Onwards to Kubernetes!	-	1hr 46min
+Section 13: Maintaining Sets of Containers with Deployments	-	1hr 32min
+Section 14: A Multi-Container App with Kubernetes	-	2hr 22min
+Section 15: Handling Traffic with Ingress Controllers	-	44min
+Section 16: Kubernetes Production Deployment	-	2hr 41min
+Section 17: HTTPS Setup with Kubernetes	-	49min
+Section 18: Local Development with Skaffold	-	29min
+
+
+
+
+
+Maximilian Schwarzmüller
+------------------------
+Section 1: Getting Started	-	1hr 10min
+
+Section 2: Docker Images & Containers: The Core Building Blocks	-	2hr 17min
+	Module 17 - Module 26	-	54min
+	Module 27 - Module 36	-	54min
+	Module 37 - Module 40	-	28min
+
+Section 3: Managing Data & Working with Volumes	-	1hr 57min
+	Module 42 - Module 46	-	25min
+	Module 47 - Module 55	-	52min
+	Module 56 - Module 64	-	39min
+
+Section 4: Networking: (Cross-)Container Communication	-	51min
+	Module 66 - Module 75	-	49min
+
+Section 5: Building Multi-Container Applications with Docker	-	1hr 20min
+	Module 79 - Module 88	-	80min
+
+Section 6: Docker Compose: Elegant Multi-Container Orchestration	-	58min
+	Module 90 - Module 100	-	58min
+
+Section 7: Working with "Utility Containers" & Executing Commands In Containers	-	30min
+	Module 101 - Module 109	-	30min
+
+Section 8: A More Complex Setup: A Laravel & PHP Dockerized Project	-	1hr 17min
+Section 9: Deploying Docker Containers	-	3hr 54min
+Section 10: Docker & Containers - A Summary	-	18min
+Section 11: Getting Started with Kubernetes	-	44min
+Section 12: Kubernetes in Action - Diving into the Core Concepts	-	2hr 33min
+Section 13: Managing Data & Volumes with Kubernetes	-	1hr 45min
+Section 14: Kubernetes Networking	-	1hr 47min
+Section 15: Kubernetes - Deployment (AWS EKS)	-	1hr 38min
+Section 16: Roundup & Next Steps	-	14min

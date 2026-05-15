@@ -1,0 +1,18 @@
++---------------------------------------------------------------+
+|    DOCKER & KUBERNETES: THE PRACTICAL GUIDE [2022 EDITION]    |
++---------------------------------------------------------------+
+
+SECTION-12   : KUBERNATES IN ACTION - DIVING INTO THE CORE CONCEPTS
+VIDEO-193    : UPDATING DEPLOYMENT
+
+Docker Image has to be updated first with a new tag.
+This image has to be push to the Docker Hub for the Kubernates to be pulled.
+
+To Update the Deployment
+	kubectl set image deployment/DEP_NAME IMAGE_NAME=DOCKER_ID/IMAGE_NAME:NEXT_TAG
+	kubectl set image deployment/first_app kub_first_app=ccpradeepm/kub_first_app:v2
+	
+View the current updating Status
+	kubectl rollout status deployment/DEP_NAME
+	kubectl rollout status deployment/first_app
+

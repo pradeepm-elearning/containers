@@ -1,0 +1,28 @@
++---------------------------------------------------------------+
+|    DOCKER & KUBERNETES: THE PRACTICAL GUIDE [2022 EDITION]    |
++---------------------------------------------------------------+
+
+SECTION-12   : KUBERNATES IN ACTION - DIVING INTO THE CORE CONCEPTS
+VIDEO-194    : DEPLOYMENT ROLLBACKS & HISTORY
+
+If you try to update with a tag which doesnt exist in the Docker Hub, it will still try to update and it will fail.
+
+To check the progress of the Rollouts
+	kubectl rollout status deployment/DEP_NAME
+	kubectl rollout status deployment/first-app
+	
+In such case, the old Pods doesn't get shutdown/terminate. However, the new instance will not start and will be in state of ERROR.
+The new update will never finish because the new Pod will never start due to the unknown Docker Tag. Which means we need to rollback the update.
+
+To Rollback the latest deployment
+	kubectl rollout undo deployment/DEP_NAME
+	kubectl rollout undo deployment/first-app
+
+To View the number of Rollback History
+	kubectl rollout history deployment/DEP_NAME --revision=NUMBER
+	kubectl rollout history deployment/first-app --revision=3
+
+To Rollback to even older deployment with history.
+	kubectl rollout undo deployment/DEP_NAME --to-revision=NUMBER
+	kubectl rollout undo deployment/first-app --to-revision=1
+

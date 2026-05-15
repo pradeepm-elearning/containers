@@ -1,0 +1,19 @@
++---------------------------------------------------------------------+
+|   P R A C T I C A L   Q U E S T I O N S   -   K U B E R N E T E S   |
++---------------------------------------------------------------------+
+1. Create a Kubernetes Cluster.
+2. View Kubernetes Deployment
+3. View Kubernetes Pods
+4. Create a Kubernetes Service.
+5. View Kubernetes Service
+6. View the Usable IP using minikube.
+7. Create 2 or more scalable Pods
+8. Update the Kubernetes Deployment with new Code.
+9. View the updating status and check the progress of updating status.
+10. Rollback Kubernetes Deployment to previous deployment.
+11. Check the Rollback numbers.
+12. View the details of Rollback History.
+13. Rollback to specific older deployment.
+14. Delete Services
+15. Delete Pods
+16. Delete Deployments
