@@ -1,9 +1,8 @@
 # DEVOPS
-## CONTAINERS
-### DOCKER & DOCKER-COMPOSE
-#### DOCKER BINARY INSTALLATION ON LINUX
+## CONTAINERS: DOCKER & DOCKER-COMPOSE
+### DOCKER BINARY INSTALLATION ON LINUX
 
-**1. DOWNLOAD THE DOCKER BINARY FILE FROM THE OFFICIAL DOCKER WEBSITE FROM [DOCKER BINARY DOWNLOAD LINK](`https://download.docker.com/linux/static/stable/`).**
+**1. DOWNLOAD THE DOCKER BINARY FILE FROM THE OFFICIAL DOCKER WEBSITE FROM [DOCKER BINARY DOWNLOAD LINK](https://download.docker.com/linux/static/stable/).**
 ```
 sudo wget https://download.docker.com/linux/static/stable/x86_64/docker-<<VERSION>>.tgz
 ```
@@ -68,8 +67,7 @@ sudo docker info
 
 ##### NOTE: By default, the Docker data is stored in the path `/var/lib/docker`
 
-*** STORE DOCKER DATA ON A SPECIFIC/CUSTOMIZED PATH (OPTIONAL): ***
-
+#### ***(OPTIONAL): TO STORE DOCKER DATA ON A SPECIFIC/CUSTOMIZED PATH***
 **8. STOP DOCKER SERVICE.**
 ```
 sudo systemctl stop docker.service
@@ -123,9 +121,9 @@ sudo rm -rf /var/lib/docker
 sudo mv -v /var/lib/docker /var/lib/docker.old
 ```
 
-#### DOCKER COMPOSE INSTALLATION ON LINUX
+### DOCKER COMPOSE INSTALLATION ON LINUX
 
-**1. CREATE A DOCKER COMPOSE PLUGIN DIRECTORY ON THE SPECIFIC USER's HOME DIRECTORY
+**1. CREATE A DOCKER COMPOSE PLUGIN DIRECTORY ON THE SPECIFIC USER's HOME DIRECTORY.**
 ```
 mkdir -p ~/.docker/cli-plugins
 ```
