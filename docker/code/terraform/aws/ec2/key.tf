@@ -9,7 +9,7 @@ resource "aws_key_pair" "ec2_key_pair_docker_test" {
 }
 
 resource "local_file" "pem_file_creation" {
-    filename = "ec2_tf_test-docker_test.pem"
+    filename = pathexpand("~/practice/docker/terraform/aws/keys/ec2_tf_test-docker_test.pem")
     content = tls_private_key.tls_key_gen_docker_test.private_key_pem
     file_permission = 0400
 }
