@@ -19,7 +19,7 @@ variable "enable_dns_hostnames" {
 variable "ami_id" {
   description = "AMI ID for the EC2 instance"
   type        = string
-  default     = "ami-0d81a5f84e58461b6"
+  default     = "ami-0f60302edeb87e255"
 }
 
 variable "instance_type" {
